@@ -23,8 +23,6 @@ import (
 
 func main() {
 	for _, url := range os.Args[1:] {
-		url = "http://" + url
-		fmt.Println(url)
 		if prefix := strings.HasPrefix(url, "http://"); !prefix {
 			url = "http://" + url
 		}
